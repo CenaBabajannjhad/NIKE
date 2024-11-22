@@ -24,7 +24,14 @@
             </div>
             <!-- navigation-bar -->
             <ul id="menu"
-                class="fixed z-50 lg:z-0 left-[-100%] lg:duration-0 top-0 bottom-0 w-screen px-4 md:px-24 lg:px-0 bg-gray-100 flex flex-col items-center space-y-4 lg:space-y-0 max-lg:justify-center lg:flex-row lg:static lg:bg-none lg:w-0 lg:space-x-6 lg:ml-6">
+                class="fixed z-50 lg:z-0 left-0 translate-x-[-100%] transition-transform duration-400 lg:duration-0 top-0 bottom-0 w-screen px-4 md:px-24 lg:px-0 bg-gray-100 flex flex-col items-center space-y-4 lg:space-y-0 max-lg:justify-center lg:flex-row lg:static lg:bg-none lg:w-0 lg:space-x-6 lg:ml-6">
+                <li id="close-menu-btn" class="lg:hidden absolute right-4 top-16">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </li>
                 <li class="lg:hidden">
                     <img src="./assets/img/logo/logo.png" alt="logo-img">
                 </li>
@@ -117,11 +124,6 @@
             </div>
         </div>
     </header>
-
-
-
-
-
     <!-- main -->
     <main>
         <div class="container">
@@ -151,6 +153,7 @@
 
 
     <script src="./src/js/main.js"></script>
+    <script src="./src/js/menuHandler.js"></script>
 </body>
 
 </html>
