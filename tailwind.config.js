@@ -21,10 +21,13 @@ module.exports = {
         "Geist-R": "Geist-regular",
         "space-L": "space-light",
         "teko-B": "teko-bold",
+        "teko-R": "teko-regular"
       },
       colors: {
-        "offer" : "#4A4C6C"
-      }
+        "offer": "#4A4C6C",
+        "hero-section-title" : "rgba(74,76,108,17%)",
+        "hero-section-paragraph" : "#181818"
+      },
     },
   },
   plugins: [],
