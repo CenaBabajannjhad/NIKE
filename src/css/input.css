@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "cabinet-bold";
+  src: url(../../assets/fonts/cabinet/CabinetGrotesk-Bold.otf);
+}
+@font-face {
+  font-family: "cabinet-extrabold";
+  src: url(../../assets/fonts/cabinet/CabinetGrotesk-Extrabold.otf);
+}
+@font-face {
+  font-family: "cabinet-medium";
+  src: url(../../assets/fonts/cabinet/CabinetGrotesk-Medium.otf);
+}
+@font-face {
+  font-family: "cabinet-regular";
+  src: url(../../assets/fonts/cabinet/CabinetGrotesk-Regular.otf);
+}
+@font-face {
+  font-family: "Geist-regular";
+  src: url(../../assets/fonts/geist/Geist-Bold.ttf);
+}
+@font-face {
+  font-family: "space-light";
+  src: url(../../assets/fonts/space-gortesk/SpaceGrotesk-Light.ttf);
+}
+@font-face {
+  font-family: "teko-bold";
+  src: url(../../assets/fonts/teko/Teko-Bold.ttf);
+}
