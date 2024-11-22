@@ -26,7 +26,14 @@ module.exports = {
       colors: {
         "offer": "#4A4C6C",
         "hero-section-title" : "rgba(74,76,108,17%)",
-        "hero-section-paragraph" : "#181818"
+        "hero-section-paragraph" : "#181818",
+        "slate-blue" : "#4A4C6C",
+        "light-slate-blue" : "#7C7EA1",
+        "moss-green" : "#77794E",
+        "light-moss-green" : "#9FA16D",
+        "cus-white" : "#f4f4f4",
+        "smoky-white" : "#E9E9EB",
+        "red" : "#DB4444"
       },
     },
   },
