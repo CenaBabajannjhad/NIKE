@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./*.html" , "./src/css/input.css"],
   theme: {
     container: {
       center: true,
@@ -18,7 +18,7 @@ module.exports = {
         "cabinet-EB": "cabinet-extrabold",
         "cabinet-M": "cabinet-medium",
         "cabinet-R": "cabinet-regular",
-        "Geist-R": "Geist-regular",
+        "Geist-B": "Geist-bold",
         "space-L": "space-light",
         "teko-B": "teko-bold",
         "teko-R": "teko-regular"
@@ -37,5 +37,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 };

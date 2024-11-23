@@ -16,7 +16,7 @@
         </div>
     </div>
     <!-- header -->
-    <header>
+    <header class="sticky top-0 z-50 bg-white/75">
         <div class="container flex items-center py-5">
             <!-- logo wrapper -->
             <div>
@@ -24,7 +24,7 @@
             </div>
             <!-- navigation-bar -->
             <ul id="menu"
-                class="fixed z-50 lg:z-0 left-0 translate-x-[-100%] transition-transform duration-200 lg:duration-0 top-0 bottom-0 w-screen px-4 md:px-24 lg:px-0 bg-gray-100 flex flex-col items-center space-y-4 lg:space-y-0 max-lg:justify-center lg:flex-row lg:static lg:bg-none lg:w-0 lg:space-x-6 lg:ml-6">
+                class="fixed z-10 lg:z-0 left-0 translate-x-[-100%] transition-transform duration-200 lg:duration-0 top-0 bottom-0 w-screen px-4 md:px-24 lg:px-0 bg-gray-100 flex flex-col items-center space-y-4 lg:space-y-0 max-lg:justify-center lg:flex-row lg:static lg:bg-none lg:w-0 lg:space-x-6 lg:ml-6">
                 <li id="close-menu-btn" class="lg:hidden absolute right-4 top-16 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-8">
@@ -114,661 +114,1352 @@
             </div>
             <div class="ml-auto lg:hidden">
                 <!-- hamburger-menu -->
-                <a id="hamburger-menu-btn" href="#" class="block">
+                <button id="hamburger-menu-btn" class="block">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-7">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </header>
     <!-- main -->
     <main>
-        <div class="container">
-            <section class="flex items-center justify-center lg:h-screen pt-20 pb-20 md:pb-40 md:pt-40">
-                <div class="absolute z-30">
-                    <p
-                        class="font-teko-R text-hero-section-paragraph text-[24px] absolute left-8 lg:left-[20%] lg:top-[5%]">
-                        A D J U S T A B L E</p>
-                    <p
-                        class="font-teko-R text-hero-section-paragraph text-[24px] absolute bottom-0 right-8 lg:right-0 lg:bottom-[10%]">
-                        S O F T
-                        P A D</p>
-                    <img class="max-w-[320px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[620px] xl:max-w-[768px] h-full"
-                        src="./assets/img/hero-section/Sport-Shoes.png" alt="hero-section-shoes-img">
+
+        <!-- hero section -->
+        <section class="container flex items-center justify-center lg:h-screen pt-20 pb-20 md:pb-40 md:pt-40">
+            <div class="absolute z-30">
+                <p
+                    class="font-teko-R text-hero-section-paragraph text-[24px] absolute left-8 lg:left-[20%] lg:top-[5%]">
+                    A D J U S T A B L E</p>
+                <p
+                    class="font-teko-R text-hero-section-paragraph text-[24px] absolute bottom-0 right-8 lg:right-0 lg:bottom-[10%]">
+                    S O F T
+                    P A D</p>
+                <img class="max-w-[320px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[620px] xl:max-w-[768px] h-full"
+                    src="./assets/img/hero-section/Sport-Shoes.png" alt="hero-section-shoes-img">
+            </div>
+            <div class="relative z-10">
+                <h2
+                    class="font-teko-B text-[140px] sm:text-[190px] lg:text-[270px] text-center leading-[160px] text-hero-section-title">
+                    SHOP ALL</h2>
+            </div>
+        </section>
+        <!-- products section -->
+        <section class="container">
+            <div class="container pb-[100px] border-b-2">
+                <!-- buttons -->
+                <div class="space-x-4 pb-14">
+                    <button
+                        class="bg-slate-blue text-cus-white border-4 rounded-full font-cabinet-M px-4 text-sm sm:text-lg sm:px-5 py-1 border-light-slate-blue">NEW
+                        ARRIVALS</button>
+                    <button
+                        class="bg-moss-green text-cus-white border-4 rounded-full font-cabinet-M px-4 text-sm sm:text-lg sm:px-5 py-1 border-light-moss-green">WHAT'S
+                        TRENDING</button>
                 </div>
-                <div class="relative z-10">
-                    <h2
-                        class="font-teko-B text-[140px] sm:text-[190px] lg:text-[270px] text-center leading-[160px] text-hero-section-title">
-                        SHOP ALL</h2>
-                </div>
-            </section>
-            <section>
-                <div class="container pb-[100px] border-b-2">
-                    <!-- buttons -->
-                    <div class="space-x-4 pb-14">
+                <!-- product-cards -->
+                <div
+                    class="grid grid-cols-2 gap-x-7 gap-y-10 lg:gap-y-[50px] lg:gap-x-[66px] lg:grid-cols-3 xl:grid-cols-4">
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-zoom-pegasus-37.png" alt="air-zoom-pegasus-37">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
                         <button
-                            class="bg-slate-blue text-cus-white border-4 rounded-full font-cabinet-M px-5 py-1 border-light-slate-blue">NEW
-                            ARRIVALS</button>
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/Maroon.png" alt="Maroon">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
                         <button
-                            class="bg-moss-green text-cus-white border-4 rounded-full font-cabinet-M px-5 py-1 border-light-moss-green">WHAT'S
-                            TRENDING</button>
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- product-cards -->
-                    <div
-                        class="grid grid-cols-2 gap-x-7 gap-y-10 lg:gap-y-[50px] lg:gap-x-[66px] lg:grid-cols-3 xl:grid-cols-4">
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/air-zoom-pegasus-37.png" alt="air-zoom-pegasus-37">
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/cosmic-unity.png" alt="air-zoom-pegasus-37">
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
+                            <!-- add-to-cart -->
                             <button
-                                class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$160</p>
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-15%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
                                 <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
                                 </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
                             </div>
                         </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/Maroon.png" alt="Maroon">
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-max-90-flyease.png" alt="air-max-90-flyease">
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
+                            <!-- add-to-cart -->
                             <button
-                                class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$80</p>
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
                                 <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
                                 </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
                             </div>
                         </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/cosmic-unity.png" alt="air-zoom-pegasus-37">
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-zoom-pegasus-37.png" alt="air-zoom-pegasus-37">
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
+                            <!-- add-to-cart -->
                             <button
-                                class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-15%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$160</p>
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
                                 <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
                                 </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
                             </div>
                         </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/air-max-90-flyease.png" alt="air-max-90-flyease">
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/Maroon.png" alt="Maroon">
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
+                            <!-- add-to-cart -->
                             <button
-                                class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$80</p>
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
                                 <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
                                 </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
                             </div>
                         </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/air-zoom-pegasus-37.png" alt="air-zoom-pegasus-37">
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/cosmic-unity.png" alt="air-zoom-pegasus-37">
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
+                            <!-- add-to-cart -->
                             <button
-                                class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$160</p>
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-15%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
                                 <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
                                 </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
                             </div>
                         </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/Maroon.png" alt="Maroon">
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-max-90-flyease.png" alt="air-max-90-flyease">
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
+                            <!-- add-to-cart -->
                             <button
-                                class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$80</p>
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
                                 <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
                                 </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
                             </div>
                         </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/cosmic-unity.png" alt="air-zoom-pegasus-37">
+                    </div>
 
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
-                            <button
-                                class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-15%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$160</p>
-                                <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                        <div class="relative flex flex-col min-h-[350px]">
-                            <!-- header -->
-                            <div class="relative overflow-hidden group">
-                                <img class="w-full h-[212px] object-cover relative bg-smoky-white"
-                                    src="./assets/img/new-products/air-max-90-flyease.png" alt="air-max-90-flyease">
-
-                                <!-- add-to-cart -->
-                                <button
-                                    class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
-                                    Add To Cart</button>
-                            </div>
-                            <!-- like-btn -->
-                            <button class="absolute top-3 right-3 text-[##181818]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                            </button>
-                            <!-- offer-btn -->
-                            <button
-                                class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
-                            <!-- description -->
-                            <div class="pt-4 space-y-1">
-                                <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
-                                <p class="font-cabinet-M text-[#787878]">$80</p>
-                                <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button class="text-yellow-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-6">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
-                                </div>
-                            </div>
-                        </div>
-
+                </div>
+            </div>
+        </section>
+        <!-- banner section -->
+        <section class="container">
+            <div class="container pt-[100px] pb-[166px] flex flex-col gap-y-8 sm:gap-x-8 sm:flex-row">
+                <div class="relative sm:mb-[100px]">
+                    <img class="w-full h-full object-cover" src="./assets/img/banners/Rectangle 16.png" alt="Frame">
+                    <div class="absolute left-6 bottom-[75px]">
+                        <h2 class="font-cabinet-EB text-4xl text-white mb-6">FAMOUS MUICHES</h2>
+                        <a class="show-now-btns hover:text-gray-700 inline-block relative overflow-hidden border-2 border-white px-3 py-2 font-cabinet-M text-white"
+                            href="#">
+                            <span class="relative z-20">SHOP NOW</span>
+                        </a>
                     </div>
                 </div>
-            </section>
 
-            <section>
-                <div class="container pt-[100px] pb-[100px] flex flex-col gap-y-8 sm:gap-x-8 sm:flex-row">
-                    <div class="relative mb-[100px]">
-                        <img class="w-full h-full object-cover" src="./assets/img/banners/Rectangle 16.png" alt="Frame">
-                        <div class="absolute left-6 bottom-[75px]">
-                            <h2 class="font-cabinet-EB text-4xl text-white mb-6">FAMOUS MUICHES</h2>
-                            <a class="font-cabinet-M text-white border-2 px-3 py-2" href="#">SHOP NOW</a>
+                <div class="relative sm:mt-[100px]">
+                    <img class="w-full h-full object-cover" src="./assets/img/banners/Rectangle 17.png" alt="Rectangle">
+                    <div class="absolute left-6 bottom-[75px]">
+                        <h2 class="font-cabinet-EB text-3xl text-white mb-6">SPECIAL COLLECTION</h2>
+                        <a class="show-now-btns hover:text-gray-700 inline-block relative overflow-hidden border-2 border-white px-3 py-2 font-cabinet-M text-white"
+                            href="#">
+                            <span class="relative z-20">SHOP NOW</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- product slider section -->
+        <section class="container">
+            <div class="container pb-[85px]">
+                <!-- slider handlers -->
+                <div class="flex items-center justify-between mb-20">
+                    <div>
+                        <h2 class="text-border font-Geist-B text-4xl sm:text-5xl">BEST <span
+                                class="text-black">SELL</span>ING
+                        </h2>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <!-- left -->
+                        <button id="slider-arrow-left" class="flex flex-col items-center leading-[1px]">
+                            <span class="font-cabinet-R">PREV</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                stroke="currentColor" class="w-10">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                            </svg>
+                        </button>
+                        <!-- right -->
+                        <button id="slider-arrow-right" class="flex flex-col items-center leading-[1px]">
+                            <span class="font-cabinet-R">NEXT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                stroke="currentColor" class="w-10">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- product list -->
+                <div id="product-slider"
+                    class="flex items-center gap-16 overflow-x-scroll scrollbar-hide scroll-smooth">
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-zoom-pegasus-37.png" alt="air-zoom-pegasus-37">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                            </div>
                         </div>
                     </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/Maroon.png" alt="Maroon">
 
-                    <div class="relative mt-[100px]">
-                        <img class="w-full h-full object-cover" src="./assets/img/banners/Rectangle 17.png"
-                            alt="Rectangle">
-                        <div class="absolute left-6 bottom-[75px]">
-                            <h2 class="font-cabinet-EB text-3xl text-white mb-6">SPECIAL COLLECTION</h2>
-                            <a class="font-cabinet-M text-white border-2 px-3 py-2" href="#">SHOP NOW</a>
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/cosmic-unity.png" alt="air-zoom-pegasus-37">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-15%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-max-90-flyease.png" alt="air-max-90-flyease">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-zoom-pegasus-37.png" alt="air-zoom-pegasus-37">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/Maroon.png" alt="Maroon">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/cosmic-unity.png" alt="air-zoom-pegasus-37">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-15%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$160</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(88)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="relative flex flex-col min-w-[270px] min-h-[350px]">
+                        <!-- header -->
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-[212px] object-cover relative bg-smoky-white"
+                                src="./assets/img/new-products/air-max-90-flyease.png" alt="air-max-90-flyease">
+
+                            <!-- add-to-cart -->
+                            <button
+                                class="transition-all duration-200 absolute bottom-[-50px] left-0 right-0 py-2 bg-black text-white text-center font-space-L group-hover:bottom-0">
+                                Add To Cart</button>
+                        </div>
+                        <!-- like-btn -->
+                        <button class="absolute top-3 right-3 text-[##181818]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                        <!-- offer-btn -->
+                        <button
+                            class="hidden absolute top-3 left-3 bg-red text-cus-white font-space-L text-sm px-2 py-1 rounded-md">-35%</button>
+                        <!-- description -->
+                        <div class="pt-4 space-y-1">
+                            <h2 class="font-cabinet-M text-md">HAVIT HV-G92 Gamepad</h2>
+                            <p class="font-cabinet-M text-[#787878]">$80</p>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="size-6">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="font-cabinet-M text-[#787878] ml-1">(101)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+        <!-- product type banners -->
+        <section class="space-y-2 gird grid-rows-3">
+            <!-- kids banner -->
+            <div class="relative">
+                <img class="w-full block" src="./assets/img/product-banner-section/sport-3.png" alt="kids-img">
+                <a class="font-cabinet-R bg-hero-section-paragraph absolute bottom-6 text-[13px] sm:text-lg sm:bottom-[60px] left-[50%] translate-x-[-50%] text-white py-1 px-2 sm:py-2 sm:px-4"
+                    href="#">KIDS</a>
+            </div>
+            <!-- women -->
+            <div class="grid gap-2 grid-cols-5">
+                <div class="relative col-span-3">
+                    <img class="w-full h-full" src="./assets/img/product-banner-section/sport.png" alt="sport">
+                    <a class="font-cabinet-R bg-hero-section-paragraph absolute bottom-6 text-[13px] sm:text-lg sm:bottom-[60px] left-[50%] translate-x-[-50%] text-white py-1 px-2 sm:py-2 sm:px-4"
+                        href="#">WOMEN</a>
+                </div>
+                <div class="relative col-span-2">
+                    <img class="w-full h-full" src="./assets/img/product-banner-section/sport-1.png" alt="sport">
+                    <a class="font-cabinet-R bg-hero-section-paragraph absolute bottom-6 text-[13px] sm:text-lg sm:bottom-[60px] left-[50%] translate-x-[-50%] text-white py-1 px-2 sm:py-2 sm:px-4"
+                        href="#">SNEAKERS</a>
+                </div>
+            </div>
+            <!-- boots -->
+            <div class="grid gap-2 grid-cols-5">
+                <div class="relative col-span-2">
+                    <img class="w-full h-full" src="./assets/img/product-banner-section/women.png" alt="sport">
+                    <a class="font-cabinet-R text-hero-section-paragraph absolute bottom-6 text-[13px] sm:text-lg sm:bottom-[60px] left-[50%] translate-x-[-50%] bg-white py-1 px-2 sm:py-2 sm:px-4"
+                        href="#">WOMEN</a>
+                </div>
+                <div class="relative col-span-3">
+                    <img class="w-full h-full" src="./assets/img/product-banner-section/men.png" alt="sport">
+                    <a class="font-cabinet-R text-hero-section-paragraph absolute bottom-6 text-[13px] sm:text-lg sm:bottom-[60px] left-[50%] translate-x-[-50%] bg-white py-1 px-2 sm:py-2 sm:px-4"
+                        href="#">SNEAKERS</a>
+                </div>
+            </div>
+        </section>
+        <!-- future section -->
+        <section class="container">
+            <div
+                class="container flex items-center flex-col space-y-20 lg:space-y-0 lg:flex-row lg:justify-center lg:space-x-[106px] pb-[150px] pt-[150px]">
+                <!-- delivery -->
+                <div class="flex items-center flex-col">
+                    <img class="block pb-6" src="./assets/img/icons/services/fast-delivery.png"
+                        alt="fast-delivery-logo">
+                    <h2 class="pb-1 font-cabinet-B text-xl text-center">FREE AND FAST DELIVERY</h2>
+                    <p class="text-hero-section-paragraph text-md text-center">Free delivery for all order over $140</p>
+                </div>
+                <!-- service -->
+                <div class="flex items-center flex-col">
+                    <img class="block pb-6" src="./assets/img/icons/services/service.png"
+                        alt="fast-delivery-logo">
+                    <h2 class="pb-1 font-cabinet-B text-xl text-center">24/7 CUSTOMER SERVICE</h2>
+                    <p class="text-hero-section-paragraph text-md text-center">Friendly 24/7 customer support</p>
+                </div>
+                <!-- guarantee -->
+                <div class="flex items-center flex-col">
+                    <img class="block pb-6" src="./assets/img/icons/services/guarantee.png"
+                        alt="fast-delivery-logo">
+                    <h2 class="pb-1 font-cabinet-B text-xl text-center">MONEY BACK GUARANTEE</h2>
+                    <p class="text-hero-section-paragraph text-md text-center">We return money within 30 days</p>
+                </div>
+            </div>
+        </section>
+        <!-- go-to-top -->
+        <div class="overflow-y-hidden">
+            <button id="go-to-top"
+                class="fixed right-5 bottom-5 lg:right-10 lg:bottom-10 translate-y-[200%] shadow-2xl rounded-full transition-transform duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="size-10 lg:size-14 text-offer">
+                    <path fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.53 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v5.69a.75.75 0 0 0 1.5 0v-5.69l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
         </div>
     </main>
 
-
-
-
-
     <script src="./src/js/main.js"></script>
     <script src="./src/js/menuHandler.js"></script>
+    <script src="./src/js/goToTopBtnHander.js"></script>
+    <script src="./src/js/productSliderHandler.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
   src: url(../../assets/fonts/cabinet/CabinetGrotesk-Regular.otf);
 }
 @font-face {
-  font-family: "Geist-regular";
+  font-family: "Geist-bold";
   src: url(../../assets/fonts/geist/Geist-Bold.ttf);
 }
 @font-face {
@@ -35,4 +35,14 @@
   src: url(../../assets/fonts/teko/Teko-Regular.ttf);
 }
 
+.show-now-btns::after {
+  @apply content-[""] absolute inset-0 bg-white translate-y-[100%] transition-transform duration-200 z-10;
+}
+.show-now-btns:hover::after {
+  @apply translate-y-0;
+}
 
+.text-border {
+  color: transparent !important;
+  -webkit-text-stroke: 1px black; 
+}
