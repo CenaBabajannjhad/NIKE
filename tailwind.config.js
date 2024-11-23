@@ -33,7 +33,8 @@ module.exports = {
         "light-moss-green" : "#9FA16D",
         "cus-white" : "#f4f4f4",
         "smoky-white" : "#E9E9EB",
-        "red" : "#DB4444"
+        "red" : "#DB4444",
+        "footer-gray" : "#333333"
       },
     },
   },
